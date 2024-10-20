@@ -2,6 +2,7 @@ import { useState } from "react";
 import { typeTodos, useTodoContext } from "../../context/TodoContext";
 
 function TodoItem({ todo }: { todo: typeTodos }) {
+  console.log("todo:::", todo);
   const { deleteTodo, editTodo, toggleTodo } = useTodoContext();
   const [todoMsg, setTodoMsg] = useState(todo.title);
   const [isTodoEditable, setIsTodoEditable] = useState(false);
